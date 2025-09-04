@@ -4,9 +4,6 @@ import pickle
 
 # Load model and helpers
 svc = pickle.load(open('svc.pkl', 'rb'))
-le = pickle.load(open('label_encoder.pkl', 'rb'))
-feature_cols = pickle.load(open('feature_cols.pkl', 'rb'))
-
 description  = pd.read_csv("description.csv")
 precautions  = pd.read_csv("precautions_df.csv")
 medications  = pd.read_csv("medications.csv")
@@ -50,3 +47,4 @@ if symptoms_text:
     st.write("**Medications:**", med)
     st.write("**Diet:**", die)
     st.write("**Workout:**", wrkout)
+
